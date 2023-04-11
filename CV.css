@@ -1,0 +1,269 @@
+/*Diseño responsivo*/
+@media only screen and (max-width: 767px) {
+    body {
+        font-size: 16px;
+    }
+    .hero {
+        padding: 100px 0;
+    }
+    .skills-img {
+        max-width: 50%;
+    }
+    
+    .skills-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .gallery-img img {
+        max-width: 100%;
+    }
+    
+    .text-overlay h3 {
+        font-size: 18px;
+    }
+    
+    .text-overlay p {
+        font-size: 14px;
+        }
+}
+
+@media only screen and (min-width: 768px) {
+
+    body {
+        font-size: 18px;
+    }
+    
+    .hero {
+        padding: 200px 0;
+    }
+    
+    .skills-img {
+        max-width: 30%;
+    }
+    
+    .gallery-img img {
+        max-width: 80%;
+    }
+    .text-overlay h3 {
+        font-size: 24px;
+    }
+    .text-overlay p {
+        font-size: 18px;
+    }
+}
+/*Fin del diseño responsivo*/
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+header {
+    background-color: #eee;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 50px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+}
+
+.profile-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.btn {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #666;
+}
+
+section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+section p {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/*Portafolio ANIMACIÓN*/
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 300px;
+}
+
+.gallery img {
+    max-width: 100%;
+    height: auto;
+}
+
+.gallery-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.gallery-img img {
+    max-width: 100%;
+    height: auto;
+    transition: all 0.3s ease;
+}
+
+.gallery-img .text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: rotateY(-180deg);
+    transition: all 0.3s ease;
+}
+
+.gallery-img:hover img {
+    transform: rotateY(180deg);
+}
+
+.gallery-img:hover .text-overlay {
+    opacity: 1;
+    transform: rotateY(0deg);
+}
+
+.text-overlay h3 {
+    font-size: 24px;
+    margin-bottom: 300px;
+    margin-left: 50px;
+}
+
+.text-overlay p {
+    font-size: 16px;
+    text-align: justify;
+    margin-right: 20px;
+}
+
+
+
+/* Estilos del CONTACTO Y FORMULARIO */
+
+.contact-form {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    height: 150px;
+}
+
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
